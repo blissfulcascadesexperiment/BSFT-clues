@@ -156,6 +156,14 @@
             border-left-color: #30b0fe;
         }
 
+        .reframe-card.couples-dynamics {
+            border-left-color: #ff6b9d;
+        }
+
+        .reframe-card.ineffective-parenting {
+            border-left-color: #ffa502;
+        }
+
         .category-tag {
             display: inline-block;
             padding: 6px 12px;
@@ -194,6 +202,16 @@
 
         .category-tag.blame-focus {
             background: #30b0fe;
+            color: white;
+        }
+
+        .category-tag.couples-dynamics {
+            background: #ff6b9d;
+            color: white;
+        }
+
+        .category-tag.ineffective-parenting {
+            background: #ffa502;
             color: white;
         }
 
@@ -633,6 +651,244 @@
                         explanation: "A parent who blames their child often carries deep self-blame and is unconsciously externalizing it."
                     }
                 ]
+            },
+
+            // COUPLES DYNAMICS
+            {
+                category: "couples-dynamics",
+                scenario: "Distant or Disconnected Partners",
+                reframes: [
+                    {
+                        from: "Emotionally unavailable",
+                        to: "Protecting themselves from disappointment",
+                        explanation: "Emotional distance often develops when someone has learned that closeness leads to hurt. Withdrawal is self-preservation, not rejection."
+                    },
+                    {
+                        from: "Not in love anymore",
+                        to: "Unable to find safe connection",
+                        explanation: "The absence of expressed love may mask deep care that's been buried under conflict, criticism, or unmet needs."
+                    },
+                    {
+                        from: "Going through the motions",
+                        to: "Maintaining stability through routine",
+                        explanation: "What looks like apathy may be a survival strategy—maintaining the relationship structure even when the warmth has dimmed."
+                    },
+                    {
+                        from: "Check-out/roommate dynamic",
+                        to: "Parallel lives allowing for individual safety",
+                        explanation: "Partners may have created separate spaces not out of indifference, but to avoid continued conflict and maintain peace."
+                    }
+                ]
+            },
+            {
+                category: "couples-dynamics",
+                scenario: "Constant Criticism and Contempt",
+                reframes: [
+                    {
+                        from: "Contemptuous and harsh",
+                        to: "Desperately trying to be understood",
+                        explanation: "Harsh criticism often masks profound pain—the person is using intensity to make their partner finally hear them."
+                    },
+                    {
+                        from: "Tearing down their partner",
+                        to: "Expressing deep disappointment about unmet expectations",
+                        explanation: "Criticism is often criticism of broken promises or failed attempts to connect, not character assassination."
+                    },
+                    {
+                        from: "Nothing they do is right",
+                        to: "Vigilant for signs their needs matter",
+                        explanation: "Constant criticism can reflect heightened sensitivity and scanning—the person is checking if their partner cares about their experience."
+                    },
+                    {
+                        from: "Mean-spirited attacks",
+                        to: "Attempts to provoke a reaction and re-engagement",
+                        explanation: "Sometimes harsh words are an indirect plea for the partner to fight back, to show they care enough to engage."
+                    }
+                ]
+            },
+            {
+                category: "couples-dynamics",
+                scenario: "Power Struggles and Control",
+                reframes: [
+                    {
+                        from: "Dominating and controlling",
+                        to: "Trying to create order and predictability",
+                        explanation: "The need to control often emerges from anxiety and fear. The controlling partner is seeking safety through certainty."
+                    },
+                    {
+                        from: "Won't listen or compromise",
+                        to: "Afraid of losing what matters most",
+                        explanation: "Rigid positions often mask vulnerability—letting go feels like abandoning their core needs or identity."
+                    },
+                    {
+                        from: "Needs to win every argument",
+                        to: "Fighting to prove their perspective has value",
+                        explanation: "The need to 'win' may reflect a history of being dismissed or invalidated. Victory = finally being heard."
+                    },
+                    {
+                        from: "Manipulative",
+                        to: "Using the only tools they know to protect themselves",
+                        explanation: "Manipulation is often learned behavior from environments where direct communication wasn't safe or effective."
+                    }
+                ]
+            },
+            {
+                category: "couples-dynamics",
+                scenario: "Infidelity or Betrayal Aftermath",
+                reframes: [
+                    {
+                        from: "Betrayer who doesn't care",
+                        to: "Someone acting out unmet needs outside the relationship",
+                        explanation: "Infidelity is often a symptom of something broken in the partnership, not evidence of indifference."
+                    },
+                    {
+                        from: "Betrayed partner can't move on",
+                        to: "Hypervigilant after safety was violated",
+                        explanation: "Ongoing suspicion isn't controlling; it's a logical response to a broken covenant that now must be rebuilt."
+                    },
+                    {
+                        from: "Unforgivable and untrustworthy",
+                        to: "Someone trying to meet needs that weren't addressed in the marriage",
+                        explanation: "Infidelity, while hurtful, can point to gaps in connection or communication that the affair was attempting to fill."
+                    },
+                    {
+                        from: "The affair means the relationship is over",
+                        to: "A crisis that exposes and can potentially repair deeper ruptures",
+                        explanation: "Affairs often become turning points where couples finally address what's been unspoken."
+                    }
+                ]
+            },
+
+            // INEFFECTIVE/IMMATURE PARENTING
+            {
+                category: "ineffective-parenting",
+                scenario: "Parent as Peer/Friend",
+                reframes: [
+                    {
+                        from: "Lacking authority and boundaries",
+                        to: "Prioritizing connection and being liked",
+                        explanation: "The parent who acts like a friend is often seeking reassurance that their child loves them and values their relationship."
+                    },
+                    {
+                        from: "Irresponsible and immature",
+                        to: "Trying to recapture lost youth or escape loneliness",
+                        explanation: "Parent-as-friend dynamics often reflect the adult's own unmet needs for companionship or their discomfort with the authority role."
+                    },
+                    {
+                        from: "Letting the child run the house",
+                        to: "Struggling to tolerate the child's disappointment",
+                        explanation: "The permissive parent often can't enforce boundaries because the child's anger or rejection feels unbearable."
+                    },
+                    {
+                        from: "Wanting to be cool and hip",
+                        to: "Desperate to stay relevant and connected",
+                        explanation: "The parent who tries too hard to be modern and trendy may be terrified of becoming irrelevant to their child."
+                    }
+                ]
+            },
+            {
+                category: "ineffective-parenting",
+                scenario: "Inconsistent or Reactive Parenting",
+                reframes: [
+                    {
+                        from: "All over the place",
+                        to: "Responding to circumstances rather than principles",
+                        explanation: "Inconsistency often reflects that the parent is stressed, tired, or has no internal structure of their own."
+                    },
+                    {
+                        from: "Blown away by emotions",
+                        to: "Overwhelmed and dysregulated",
+                        explanation: "The parent who goes from zero to rage didn't plan to lose control; they were flooded and reactive."
+                    },
+                    {
+                        from: "Unpredictable discipline",
+                        to: "Discipline determined by the parent's emotional state, not the child's behavior",
+                        explanation: "This pattern reveals the parent's dysregulation more than the child's misbehavior."
+                    },
+                    {
+                        from: "Can't follow through",
+                        to: "Unable to tolerate the conflict that follows a boundary",
+                        explanation: "The parent often gives in because the child's distress or pushback becomes intolerable."
+                    }
+                ]
+            },
+            {
+                category: "ineffective-parenting",
+                scenario: "Neglectful or Absent Parenting",
+                reframes: [
+                    {
+                        from: "Doesn't care about their kids",
+                        to: "Overwhelmed and barely keeping head above water",
+                        explanation: "Neglect often results from the parent's own survival mode, not from lack of love."
+                    },
+                    {
+                        from: "No rules or expectations",
+                        to: "Unable to organize or structure due to their own chaos",
+                        explanation: "The parent who can't set limits often has internal disorganization they're struggling with."
+                    },
+                    {
+                        from: "Checked out parent",
+                        to: "Parent in their own crisis",
+                        explanation: "Neglectful parents are often dealing with depression, addiction, trauma, or poverty that consumes their capacity."
+                    },
+                    {
+                        from: "Self-centered and irresponsible",
+                        to: "Stuck in their own developmental stage",
+                        explanation: "The parent who acts like a child themselves may have had development arrested by their own trauma or unmet needs."
+                    }
+                ]
+            },
+            {
+                category: "ineffective-parenting",
+                scenario: "Parentified Child / Role Reversal",
+                reframes: [
+                    {
+                        from: "Parent using child as support system",
+                        to: "Parent relying on their child because there's no other safe adult",
+                        explanation: "The parent isn't deliberately parentifying; they're isolated and their child is the only reliable person in their world."
+                    },
+                    {
+                        from: "Burdening child with adult problems",
+                        to: "Unable to contain adult struggles without support",
+                        explanation: "The parent likely grew up with unclear boundaries themselves and doesn't have a model for age-appropriate role separation."
+                    },
+                    {
+                        from: "Emotionally incestuous relationship",
+                        to: "Parent seeking the intimacy and understanding they can't get from peers",
+                        explanation: "This reflection of confusion about boundaries often stems from the parent's own past, not intentional boundary violation."
+                    },
+                    {
+                        from: "Making child responsible for parent's wellbeing",
+                        to: "Parent implicitly asking child to provide what they desperately need",
+                        explanation: "The parent-child role reversal is often the parent's unconscious cry for help and connection."
+                    }
+                ]
+            },
+            {
+                category: "ineffective-parenting",
+                scenario: "Parent Mimicking Child's Behavior or Competing",
+                reframes: [
+                    {
+                        from: "Immature and childish",
+                        to: "Afraid of losing their child to adolescence",
+                        explanation: "The parent who acts like a child may be trying to stay relevant and connected as their child grows away."
+                    },
+                    {
+                        from: "Threatened by child's independence",
+                        to: "Terrified of becoming unnecessary",
+                        explanation: "Competition with the child often masks deep anxiety about the parent's own identity and worth."
+                    },
+                    {
+                        from: "Can't accept child growing up",
+                        to: "Struggling to update their role as the child develops",
+                        explanation: "The parent may have defined themselves entirely through parenting small children and doesn't know who they are otherwise."
+                    },
+                    {
+                        from: "Jealous of child's relationships",
+                        to: "Desperate to maintain the primary bond as it naturally shifts",
+                        explanation: "Jealousy often reflects the parent's fear that they'll be abandoned or replaced as the child forms their own relationships."
+                    }
+                ]
             }
         ];
 
@@ -643,7 +899,9 @@
             { id: "enmeshment", name: "Enmeshment" },
             { id: "sermonizing", name: "Sermonizing" },
             { id: "conflict-escalation", name: "Conflict Escalation" },
-            { id: "blame-focus", name: "Blame & Focus" }
+            { id: "blame-focus", name: "Blame & Focus" },
+            { id: "couples-dynamics", name: "Couples Dynamics" },
+            { id: "ineffective-parenting", name: "Ineffective Parenting" }
         ];
 
         let currentCategory = "all";
