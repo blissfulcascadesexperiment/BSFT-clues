@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSFT Reframe Guide | Brief Strategic Family Therapy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-box input {
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            min-width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .search-box button {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #764ba2;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .category-btn {
+            padding: 10px 18px;
+            background: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover {
+            border-color: #667eea;
+            background: #f9f7ff;
+        }
+
+        .category-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .reframes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .reframe-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border-left: 5px solid #667eea;
+        }
+
+        .reframe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .reframe-card.behavior-control {
+            border-left-color: #f093fb;
+        }
+
+        .reframe-card.disengagement {
+            border-left-color: #4facfe;
+        }
+
+        .reframe-card.enmeshment {
+            border-left-color: #43e97b;
+        }
+
+        .reframe-card.sermonizing {
+            border-left-color: #fa709a;
+        }
+
+        .reframe-card.conflict-escalation {
+            border-left-color: #fee140;
+        }
+
+        .reframe-card.blame-focus {
+            border-left-color: #30b0fe;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .category-tag.behavior-control {
+            background: #f093fb;
+            color: white;
+        }
+
+        .category-tag.disengagement {
+            background: #4facfe;
+            color: white;
+        }
+
+        .category-tag.enmeshment {
+            background: #43e97b;
+            color: white;
+        }
+
+        .category-tag.sermonizing {
+            background: #fa709a;
+            color: white;
+        }
+
+        .category-tag.conflict-escalation {
+            background: #fee140;
+            color: #333;
+        }
+
+        .category-tag.blame-focus {
+            background: #30b0fe;
+            color: white;
+        }
+
+        .reframe-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .reframe-pair {
+            margin-bottom: 15px;
+        }
+
+        .reframe-pair:last-child {
+            margin-bottom: 0;
+        }
+
+        .from {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .from::before {
+            content: "❌ From: ";
+        }
+
+        .to {
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .to::before {
+            content: "✓ To: ";
+        }
+
+        .explanation {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95em;
+            padding-left: 15px;
+            border-left: 3px solid #ecf0f1;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .no-results h3 {
+            margin-bottom: 10px;
+        }
+
+        .print-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .print-btn:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .reframes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box input {
+                min-width: 200px;
+            }
+
+            .category-filters {
+                gap: 8px;
+            }
+
+            .category-btn {
+                padding: 8px 14px;
+                font-size: 0.85em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .search-box, .category-filters, .print-btn, header {
+                display: none;
+            }
+
+            .reframe-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BSFT Reframe Guide</h1>
+            <p>Brief Strategic Family Therapy Reframing Resource for Therapists</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search reframes...">
+                <button onclick="searchReframes()">Search</button>
+            </div>
+            <div class="category-filters" id="categoryFilters"></div>
+        </header>
+
+        <div class="reframes-grid" id="reframesGrid"></div>
+
+        <button class="print-btn" onclick="window.print()">🖨️ Print All Reframes</button>
+
+        <footer>
+            <p>BSFT Reframe Guide | A therapeutic resource for Brief Strategic Family Therapy practitioners</p>
+        </footer>
+    </div>
+
+    <script>
+        const reframes = [
+            // BEHAVIOR CONTROL
+            {
+                category: "behavior-control",
+                scenario: "Controlling Parent",
+                reframes: [
+                    {
+                        from: "Controlling",
+                        to: "Protective and invested",
+                        explanation: "The parent's tight grip on rules and monitoring stems from genuine concern about their child's safety and future. Control is misplaced care."
+                    },
+                    {
+                        from: "Overbearing",
+                        to: "Ensuring structure",
+                        explanation: "What appears overbearing is the parent's attempt to create predictability and safety through clear expectations and boundaries."
+                    },
+                    {
+                        from: "Rigid and inflexible",
+                        to: "Consistent and reliable",
+                        explanation: "Rigidity can be reframed as steadfast commitment to consistency—a gift of predictability in an unpredictable world."
+                    }
+                ]
+            },
+            {
+                category: "behavior-control",
+                scenario: "Rebellious Teenager",
+                reframes: [
+                    {
+                        from: "Defiant and disrespectful",
+                        to: "Asserting autonomy and identity",
+                        explanation: "The teenager isn't rejecting the parent; they're exercising their developmental need to establish independence. It's age-appropriate, not pathological."
+                    },
+                    {
+                        from: "Out of control",
+                        to: "Testing boundaries to find safety",
+                        explanation: "Teenagers push limits to understand where safety ends and danger begins. This exploration is necessary for development."
+                    },
+                    {
+                        from: "Disrespectful",
+                        to: "Communicating through behavior",
+                        explanation: "When words fail, behavior becomes the message. The teen is telling the parent something important through their resistance."
+                    }
+                ]
+            },
+
+            // DISENGAGEMENT
+            {
+                category: "disengagement",
+                scenario: "Disengaged Parent in High-Conflict Relationship",
+                reframes: [
+                    {
+                        from: "Checked out",
+                        to: "Self-protecting a tender spot",
+                        explanation: "A disengaged parent isn't absent because they don't care; they've learned that proximity escalates conflict, so they withdraw to keep the peace. The care is there; it's just held back."
+                    },
+                    {
+                        from: "Avoiding",
+                        to: "Strategically preserving",
+                        explanation: "Avoidance looks like disengagement, but it can also be a disciplined choice to not fuel cycles that hurt the kids. The parent may be choosing when and how to engage, not whether."
+                    },
+                    {
+                        from: "Emotionally absent",
+                        to: "Exhausted by emotional labor",
+                        explanation: "High-conflict relationships drain the parent's capacity to be emotionally available. Their low battery isn't disinterest; it's depletion from managing volatility."
+                    },
+                    {
+                        from: "Not showing up",
+                        to: "Showing up in safer ways",
+                        explanation: "The disengaged parent may be present in subtler forms: maintaining routines, providing quiet consistency, staying physically safe so they can parent another day."
+                    },
+                    {
+                        from: "Checked out parent",
+                        to: "Regulated parent",
+                        explanation: "Their disengagement might be the most mature response: not absorbing chaos, so they don't hand it to the children."
+                    }
+                ]
+            },
+            {
+                category: "disengagement",
+                scenario: "Withdrawn or Isolated Teen",
+                reframes: [
+                    {
+                        from: "Antisocial and withdrawn",
+                        to: "Introspective and selective",
+                        explanation: "Withdrawal isn't social dysfunction; it's the teen's way of processing complex emotions and maintaining emotional safety."
+                    },
+                    {
+                        from: "Isolating themselves",
+                        to: "Creating necessary space for self-discovery",
+                        explanation: "Time alone is often when teenagers work through identity questions and develop their internal compass."
+                    },
+                    {
+                        from: "Avoiding family",
+                        to: "Boundary-setting",
+                        explanation: "The teen may be drawing lines to differentiate themselves from family patterns—a necessary step toward individuation."
+                    }
+                ]
+            },
+
+            // ENMESHMENT
+            {
+                category: "enmeshment",
+                scenario: "Enmeshed Parent-Child Relationship",
+                reframes: [
+                    {
+                        from: "Too close and codependent",
+                        to: "Intensely connected",
+                        explanation: "The closeness, while undifferentiated, comes from a place of deep emotional bonding. The issue isn't the connection; it's the lack of boundaries within it."
+                    },
+                    {
+                        from: "Parent treating child as therapist",
+                        to: "Parent seeking emotional support from the only person they trust",
+                        explanation: "The parent isn't manipulative; they're isolated and have found their only confidant in their child. Shame about this helps no one."
+                    },
+                    {
+                        from: "Child's identity consumed by family",
+                        to: "Child is loyal and family-focused",
+                        explanation: "The child's enmeshment reflects loyalty and deep family investment, even if the boundaries are unhealthy."
+                    },
+                    {
+                        from: "Unhealthy dependence",
+                        to: "Adaptive to current family system",
+                        explanation: "The enmeshment works within the system's current needs, even if it prevents growth. It's not bad; it's just limited."
+                    }
+                ]
+            },
+            {
+                category: "enmeshment",
+                scenario: "Parental Overinvolvement",
+                reframes: [
+                    {
+                        from: "Helicopter parenting",
+                        to: "Hands-on parenting rooted in commitment",
+                        explanation: "The parent's constant involvement reflects dedication to their child's success, even if the approach limits independence."
+                    },
+                    {
+                        from: "Intrusive and controlling",
+                        to: "Unable to separate their child's struggles from their own identity",
+                        explanation: "The overinvolvement reveals the parent's vulnerability and investment, not malice."
+                    },
+                    {
+                        from: "Not letting child fail",
+                        to: "Protecting child from pain",
+                        explanation: "The parent's rescue efforts come from a place of love and fear, wanting to shield their child from suffering."
+                    }
+                ]
+            },
+
+            // SERMONIZING
+            {
+                category: "sermonizing",
+                scenario: "Parent Lectures Without Listening",
+                reframes: [
+                    {
+                        from: "Sermonizing and condescending",
+                        to: "Trying to impart wisdom from hard-won experience",
+                        explanation: "The parent's lectures, while ineffective, come from lived experience and a desire to protect their child from similar mistakes."
+                    },
+                    {
+                        from: "Always correcting",
+                        to: "Vigilant and caring",
+                        explanation: "Constant correction isn't criticism; it's the parent's way of trying to guide and improve their child's path."
+                    },
+                    {
+                        from: "Dismissive of child's perspective",
+                        to: "Eager to share what they know",
+                        explanation: "The parent's rush to talk over the child reveals their anxiety about being helpful and relevant."
+                    },
+                    {
+                        from: "Teaching through judgment",
+                        to: "Sharing values and principles",
+                        explanation: "The parent's moral stance isn't meant to shame; it's their attempt to transmit what they believe matters."
+                    }
+                ]
+            },
+            {
+                category: "sermonizing",
+                scenario: "Parent with Unresolved Beliefs About 'Right' Behavior",
+                reframes: [
+                    {
+                        from: "Rigid moralist",
+                        to: "Someone with strong principles trying to pass them on",
+                        explanation: "The parent's rigidity reflects their own need for certainty and order, not a desire to oppress."
+                    },
+                    {
+                        from: "Refusing to understand",
+                        to: "Frightened by different choices",
+                        explanation: "Resistance to understanding the child's choices often masks the parent's fear that their own beliefs don't matter or aren't being honored."
+                    },
+                    {
+                        from: "Preaching",
+                        to: "Reasserting core values under threat",
+                        explanation: "The parent's increased sermonizing may indicate they feel their worldview is under attack by their child's independence."
+                    }
+                ]
+            },
+
+            // CONFLICT ESCALATION
+            {
+                category: "conflict-escalation",
+                scenario: "Parent-Child Conflict Cycle",
+                reframes: [
+                    {
+                        from: "Constant arguing",
+                        to: "Persistent but clumsy attempts at connection",
+                        explanation: "Arguments, while destructive, are the family's way of staying engaged when more constructive communication is unavailable."
+                    },
+                    {
+                        from: "Yelling and angry",
+                        to: "Overwhelmed and searching for impact",
+                        explanation: "Escalation often happens when calmer approaches have failed. Anger is frustration's megaphone."
+                    },
+                    {
+                        from: "Can't let things go",
+                        to: "Desperate to be heard",
+                        explanation: "Repeating arguments reflects the parent's or child's fear that their core point was missed, not stubbornness."
+                    },
+                    {
+                        from: "Hostile relationship",
+                        to: "High-stakes relationship with unmet needs",
+                        explanation: "Hostility often indicates that something important is at stake and the current approach to meeting those needs isn't working."
+                    }
+                ]
+            },
+            {
+                category: "conflict-escalation",
+                scenario: "Sibling Rivalry and Fighting",
+                reframes: [
+                    {
+                        from: "Mean and cruel to each other",
+                        to: "Testing power and boundaries with the safest people",
+                        explanation: "Siblings often treat each other roughly because family is where they feel safe enough to be vulnerable—even if that vulnerability emerges as aggression."
+                    },
+                    {
+                        from: "Can't get along",
+                        to: "Negotiating their individual places in the family hierarchy",
+                        explanation: "Sibling conflict is often the process of establishing identity separate from each other, even if it looks destructive."
+                    },
+                    {
+                        from: "Jealous and competitive",
+                        to: "Both fighting for a limited resource (parental attention, validation)",
+                        explanation: "Competition reveals that something precious is felt to be scarce. The conflict points to what matters most."
+                    }
+                ]
+            },
+
+            // BLAME FOCUS
+            {
+                category: "blame-focus",
+                scenario: "Family Member Blamed for All Problems",
+                reframes: [
+                    {
+                        from: "The identified patient/scapegoat",
+                        to: "The symptom-bearer for family stress",
+                        explanation: "When one person becomes the focus of blame, they're often manifesting the family's collective distress. Their behavior is feedback, not the root cause."
+                    },
+                    {
+                        from: "Problem child",
+                        to: "Child responding to family pressure",
+                        explanation: "The child's difficulties often escalate when they're positioned as the problem. Their behavior is a response to that identity."
+                    },
+                    {
+                        from: "Always causing drama",
+                        to: "Expressing what others are containing",
+                        explanation: "The dramatic family member may be the one giving voice to conflicts, pain, or instability that others are suppressing."
+                    },
+                    {
+                        from: "The cause of family breakdown",
+                        to: "The mirror of family breakdown",
+                        explanation: "Rather than causing family problems, the blamed member is often reflecting existing systemic issues back to the family."
+                    }
+                ]
+            },
+            {
+                category: "blame-focus",
+                scenario: "Parent Blaming Child for Their Own Struggles",
+                reframes: [
+                    {
+                        from: "Parent taking no responsibility",
+                        to: "Parent in pain, misattributing its source",
+                        explanation: "When parents blame children for their unhappiness, it often reflects the parent's own unresolved pain and confusion about what they need."
+                    },
+                    {
+                        from: "Cruel and unfair",
+                        to: "Desperate attempt to regain control",
+                        explanation: "Blame can be the parent's way of trying to make sense of loss of control and restore order when they feel helpless."
+                    },
+                    {
+                        from: "Emotionally abusive",
+                        to: "Parent projecting their own self-blame",
+                        explanation: "A parent who blames their child often carries deep self-blame and is unconsciously externalizing it."
+                    }
+                ]
+            }
+        ];
+
+        const categories = [
+            { id: "all", name: "All Categories" },
+            { id: "behavior-control", name: "Behavior Control" },
+            { id: "disengagement", name: "Disengagement" },
+            { id: "enmeshment", name: "Enmeshment" },
+            { id: "sermonizing", name: "Sermonizing" },
+            { id: "conflict-escalation", name: "Conflict Escalation" },
+            { id: "blame-focus", name: "Blame & Focus" }
+        ];
+
+        let currentCategory = "all";
+        let currentSearch = "";
+
+        function initializePage() {
+            renderCategoryFilters();
+            renderReframes();
+        }
+
+        function renderCategoryFilters() {
+            const filterContainer = document.getElementById("categoryFilters");
+            filterContainer.innerHTML = categories.map(cat => `
+                <button class="category-btn ${cat.id === 'all' ? 'active' : ''}" 
+                        onclick="filterByCategory('${cat.id}')">${cat.name}</button>
+            `).join("");
+        }
+
+        function filterByCategory(categoryId) {
+            currentCategory = categoryId;
+            currentSearch = "";
+            document.getElementById("searchInput").value = "";
+            document.querySelectorAll(".category-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+            event.target.classList.add("active");
+            renderReframes();
+        }
+
+        function searchReframes() {
+            currentSearch = document.getElementById("searchInput").value.toLowerCase();
+            currentCategory = "all";
+            document.querySelectorAll(".category-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+            document.querySelectorAll(".category-btn")[0].classList.add("active");
+            renderReframes();
+        }
+
+        function renderReframes() {
+            const grid = document.getElementById("reframesGrid");
+            let filtered = reframes;
+
+            if (currentCategory !== "all") {
+                filtered = filtered.filter(r => r.category === currentCategory);
+            }
+
+            if (currentSearch) {
+                filtered = filtered.filter(r => 
+                    r.scenario.toLowerCase().includes(currentSearch) ||
+                    r.reframes.some(rf => 
+                        rf.from.toLowerCase().includes(currentSearch) ||
+                        rf.to.toLowerCase().includes(currentSearch) ||
+                        rf.explanation.toLowerCase().includes(currentSearch)
+                    )
+                );
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="no-results"><h3>No reframes found</h3><p>Try a different search or category.</p></div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(reframe => `
+                <div class="reframe-card ${reframe.category}">
+                    <span class="category-tag ${reframe.category}">${categories.find(c => c.id === reframe.category).name}</span>
+                    <h3>${reframe.scenario}</h3>
+                    ${reframe.reframes.map(rf => `
+                        <div class="reframe-pair">
+                            <div class="from">"${rf.from}"</div>
+                            <div class="to">"${rf.to}"</div>
+                            <div class="explanation">${rf.explanation}</div>
+                        </div>
+                    `).join("")}
+                </div>
+            `).join("");
+        }
+
+        document.getElementById("searchInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") searchReframes();
+        });
+
+        initializePage();
+    </script>
+</body>
+</html>
