@@ -402,6 +402,27 @@
                     }
                 ]
             },
+            {
+                category: "behavior-control",
+                scenario: "Diabetes Patient Continuing to Eat Harmful Food",
+                reframes: [
+                    {
+                        from: "Noncompliant",
+                        to: "Making an immediate comfort choice over long-term health",
+                        explanation: "The patient's behavior is not a lack of intelligence or commitment; it is a short-term coping response that is currently outweighing their long-term health goals."
+                    },
+                    {
+                        from: "Self-sabotaging",
+                        to: "Acting from overwhelm and habit",
+                        explanation: "The behavior is better understood as a familiar coping pattern under stress, rather than a deliberate desire to harm herself."
+                    },
+                    {
+                        from: "Choosing death by food",
+                        to: "Seeking relief or pleasure in the moment despite known consequences",
+                        explanation: "The behavior reflects a moment-to-moment decision shaped by cravings, stress, and reward, not a fully conscious plan to die."
+                    }
+                ]
+            },
 
             // DISENGAGEMENT
             {
@@ -411,12 +432,12 @@
                     {
                         from: "Checked out",
                         to: "Self-protecting a tender spot",
-                        explanation: "A disengaged parent isn't absent because they don't care; they've learned that proximity escalates conflict, so they withdraw to keep the peace. The care is there; it's just held back."
+                        explanation: "A disengaged parent isn't absent because they don't care; they've learned that proximity escalates conflict, so they withdraw to keep the peace. The care is present, but the strategy is protective."
                     },
                     {
                         from: "Avoiding",
                         to: "Strategically preserving",
-                        explanation: "Avoidance looks like disengagement, but it can also be a disciplined choice to not fuel cycles that hurt the kids. The parent may be choosing when and how to engage, not whether."
+                        explanation: "Avoidance looks like disengagement, but it can also be a disciplined choice to not fuel cycles that hurt the kids. The parent may be choosing when and how to engage."
                     },
                     {
                         from: "Emotionally absent",
@@ -486,71 +507,43 @@
             },
             {
                 category: "enmeshment",
-                scenario: "Parental Overinvolvement",
+                scenario: "Family Funding an Adult Child's Addiction",
                 reframes: [
                     {
-                        from: "Helicopter parenting",
-                        to: "Hands-on parenting rooted in commitment",
-                        explanation: "The parent's constant involvement reflects dedication to their child's success, even if the approach limits independence."
+                        from: "Enabling",
+                        to: "Trying to protect the relationship while managing fear",
+                        explanation: "The family may be giving money not because they endorse the addiction, but because they are trying to reduce panic, maintain contact, or hold onto hope."
                     },
                     {
-                        from: "Intrusive and controlling",
-                        to: "Unable to separate their child's struggles from their own identity",
-                        explanation: "The overinvolvement reveals the parent's vulnerability and investment, not malice."
+                        from: "Codependent",
+                        to: "Acting from anxiety and love",
+                        explanation: "What looks like codependency can also be a desperate attempt to prevent a loved one from slipping further into harm while feeling helpless."
                     },
                     {
-                        from: "Not letting child fail",
-                        to: "Protecting child from pain",
-                        explanation: "The parent's rescue efforts come from a place of love and fear, wanting to shield their child from suffering."
-                    }
-                ]
-            },
-
-            // SERMONIZING
-            {
-                category: "sermonizing",
-                scenario: "Parent Lectures Without Listening",
-                reframes: [
-                    {
-                        from: "Sermonizing and condescending",
-                        to: "Trying to impart wisdom from hard-won experience",
-                        explanation: "The parent's lectures, while ineffective, come from lived experience and a desire to protect their child from similar mistakes."
-                    },
-                    {
-                        from: "Always correcting",
-                        to: "Vigilant and caring",
-                        explanation: "Constant correction isn't criticism; it's the parent's way of trying to guide and improve their child's path."
-                    },
-                    {
-                        from: "Dismissive of child's perspective",
-                        to: "Eager to share what they know",
-                        explanation: "The parent's rush to talk over the child reveals their anxiety about being helpful and relevant."
-                    },
-                    {
-                        from: "Teaching through judgment",
-                        to: "Sharing values and principles",
-                        explanation: "The parent's moral stance isn't meant to shame; it's their attempt to transmit what they believe matters."
+                        from: "Rewarding addiction",
+                        to: "Offering help without a clear boundary",
+                        explanation: "The money may be an expression of care, but without a structure or accountability plan it can unintentionally reinforce the addictive cycle."
                     }
                 ]
             },
             {
-                category: "sermonizing",
-                scenario: "Parent with Unresolved Beliefs About 'Right' Behavior",
+                category: "enmeshment",
+                scenario: "Family Making Excuses for Harmful Behavior",
                 reframes: [
                     {
-                        from: "Rigid moralist",
-                        to: "Someone with strong principles trying to pass them on",
-                        explanation: "The parent's rigidity reflects their own need for certainty and order, not a desire to oppress."
+                        from: "Excusing and enabling",
+                        to: "Trying to soften the impact of fear and shame",
+                        explanation: "The family may be making excuses to reduce discomfort, protect the person, and avoid the pain of consequences."
                     },
                     {
-                        from: "Refusing to understand",
-                        to: "Frightened by different choices",
-                        explanation: "Resistance to understanding the child's choices often masks the parent's fear that their own beliefs don't matter or aren't being honored."
+                        from: "In denial",
+                        to: "Avoiding a painful truth they don't yet know how to face",
+                        explanation: "The family is not necessarily acting from malice; they are trying to hold onto hope while the reality of the behavior remains frightening."
                     },
                     {
-                        from: "Preaching",
-                        to: "Reasserting core values under threat",
-                        explanation: "The parent's increased sermonizing may indicate they feel their worldview is under attack by their child's independence."
+                        from: "Lack of accountability",
+                        to: "Unclear boundaries in the face of fear",
+                        explanation: "The family may be saying they want change while still protecting the system from the discomfort of firm consequences."
                     }
                 ]
             },
@@ -558,97 +551,66 @@
             // CONFLICT ESCALATION
             {
                 category: "conflict-escalation",
-                scenario: "Parent-Child Conflict Cycle",
+                scenario: "Couple Constantly Fighting",
                 reframes: [
                     {
-                        from: "Constant arguing",
-                        to: "Persistent but clumsy attempts at connection",
-                        explanation: "Arguments, while destructive, are the family's way of staying engaged when more constructive communication is unavailable."
+                        from: "A broken relationship",
+                        to: "A relationship stuck in a high-intensity cycle",
+                        explanation: "The constant fighting may reflect a pattern of escalating conflict rather than an absence of love or commitment."
                     },
                     {
-                        from: "Yelling and angry",
-                        to: "Overwhelmed and searching for impact",
-                        explanation: "Escalation often happens when calmer approaches have failed. Anger is frustration's megaphone."
+                        from: "Incompatible",
+                        to: "Two people in emotional dysregulation with unresolved attachment needs",
+                        explanation: "The fight can be reframed as a sign that both people are overwhelmed by the intensity of the relationship, not necessarily that they are fundamentally mismatched."
                     },
                     {
-                        from: "Can't let things go",
-                        to: "Desperate to be heard",
-                        explanation: "Repeating arguments reflects the parent's or child's fear that their core point was missed, not stubbornness."
-                    },
-                    {
-                        from: "Hostile relationship",
-                        to: "High-stakes relationship with unmet needs",
-                        explanation: "Hostility often indicates that something important is at stake and the current approach to meeting those needs isn't working."
+                        from: "Unwise to marry",
+                        to: "Needing structure, repair, and clarity before commitment",
+                        explanation: "The decision to marry may be driven by hope and attachment rather than resolution, making the need for intervention clear rather than the couple inherently doomed."
                     }
                 ]
             },
             {
                 category: "conflict-escalation",
-                scenario: "Sibling Rivalry and Fighting",
+                scenario: "Partner Lashing Out After Respect Has Returned",
                 reframes: [
                     {
-                        from: "Mean and cruel to each other",
-                        to: "Testing power and boundaries with the safest people",
-                        explanation: "Siblings often treat each other roughly because family is where they feel safe enough to be vulnerable—even if that vulnerability emerges as aggression."
+                        from: "Explosive and irrational",
+                        to: "Feeling destabilized by the loss of familiar conflict",
+                        explanation: "The person's reaction may reflect anxiety when the pattern shifts and old ways of relating are no longer available."
                     },
                     {
-                        from: "Can't get along",
-                        to: "Negotiating their individual places in the family hierarchy",
-                        explanation: "Sibling conflict is often the process of establishing identity separate from each other, even if it looks destructive."
+                        from: "Provoking chaos",
+                        to: "Trying to restore a familiar emotional pattern",
+                        explanation: "When the relationship becomes more peaceful, some people respond with escalation because the old cycle is the only context that feels predictable."
                     },
                     {
-                        from: "Jealous and competitive",
-                        to: "Both fighting for a limited resource (parental attention, validation)",
-                        explanation: "Competition reveals that something precious is felt to be scarce. The conflict points to what matters most."
+                        from: "Disrespectful and unsafe",
+                        to: "Defensively reacting to perceived threat",
+                        explanation: "The outburst may represent an attempt to regain control in a system that has changed, rather than a simple disregard for the relationship."
                     }
                 ]
             },
 
-            // BLAME FOCUS
+            // INEFFECTIVE PARENTING
             {
-                category: "blame-focus",
-                scenario: "Family Member Blamed for All Problems",
+                category: "ineffective-parenting",
+                scenario: "Parent and Child Excusing the Child's Behavior While Wanting It Gone",
                 reframes: [
                     {
-                        from: "The identified patient/scapegoat",
-                        to: "The symptom-bearer for family stress",
-                        explanation: "When one person becomes the focus of blame, they're often manifesting the family's collective distress. Their behavior is feedback, not the root cause."
+                        from: "Parent is inconsistent and passive",
+                        to: "Parent is trying to protect the child and their own anxiety at the same time",
+                        explanation: "The parent may want the behavior to stop, but their fear of consequences and their wish to avoid conflict keep them from enforcing structure."
                     },
                     {
-                        from: "Problem child",
-                        to: "Child responding to family pressure",
-                        explanation: "The child's difficulties often escalate when they're positioned as the problem. Their behavior is a response to that identity."
+                        from: "Child is manipulative",
+                        to: "Child is learning that behavior gets relief without accountability",
+                        explanation: "The child may not be intentionally manipulative; they may simply be learning that the family responds with excuses rather than boundaries."
                     },
                     {
-                        from: "Always causing drama",
-                        to: "Expressing what others are containing",
-                        explanation: "The dramatic family member may be the one giving voice to conflicts, pain, or instability that others are suppressing."
-                    },
-                    {
-                        from: "The cause of family breakdown",
-                        to: "The mirror of family breakdown",
-                        explanation: "Rather than causing family problems, the blamed member is often reflecting existing systemic issues back to the family."
-                    }
-                ]
-            },
-            {
-                category: "blame-focus",
-                scenario: "Parent Blaming Child for Their Own Struggles",
-                reframes: [
-                    {
-                        from: "Parent taking no responsibility",
-                        to: "Parent in pain, misattributing its source",
-                        explanation: "When parents blame children for their unhappiness, it often reflects the parent's own unresolved pain and confusion about what they need."
-                    },
-                    {
-                        from: "Cruel and unfair",
-                        to: "Desperate attempt to regain control",
-                        explanation: "Blame can be the parent's way of trying to make sense of loss of control and restore order when they feel helpless."
-                    },
-                    {
-                        from: "Emotionally abusive",
-                        to: "Parent projecting their own self-blame",
-                        explanation: "A parent who blames their child often carries deep self-blame and is unconsciously externalizing it."
+                        from: "The family is hypocritical",
+                        to: "The family is stuck in a wishful but unstable system",
+                        explanation: "The mixed message—wanting the behavior gone while creating loopholes—can be reframed as a family system struggling to handle discomfort without clear limits."
                     }
                 ]
             },
@@ -656,335 +618,208 @@
             // COUPLES DYNAMICS
             {
                 category: "couples-dynamics",
-                scenario: "Distant or Disconnected Partners",
+                scenario: "Couple Choosing Marriage While Still Fighting",
                 reframes: [
                     {
-                        from: "Emotionally unavailable",
-                        to: "Protecting themselves from disappointment",
-                        explanation: "Emotional distance often develops when someone has learned that closeness leads to hurt. Withdrawal is self-preservation, not rejection."
+                        from: "A sign they should not marry",
+                        to: "A sign they are in urgent need of repair before commitment",
+                        explanation: "The couple may be acting from hope, fear of separation, or attachment needs rather than clarity. The problem is not that they can't love each other, but that they haven't yet built a functional way to handle conflict."
                     },
                     {
-                        from: "Not in love anymore",
-                        to: "Unable to find safe connection",
-                        explanation: "The absence of expressed love may mask deep care that's been buried under conflict, criticism, or unmet needs."
+                        from: "Emotional incompatibility",
+                        to: "A relationship in active escalation",
+                        explanation: "The conflict may be more about a painful cycle than a fundamental lack of compatibility. The couple needs a structure that interrupts the pattern, not a verdict about the relationship."
                     },
                     {
-                        from: "Going through the motions",
-                        to: "Maintaining stability through routine",
-                        explanation: "What looks like apathy may be a survival strategy—maintaining the relationship structure even when the warmth has dimmed."
-                    },
-                    {
-                        from: "Check-out/roommate dynamic",
-                        to: "Parallel lives allowing for individual safety",
-                        explanation: "Partners may have created separate spaces not out of indifference, but to avoid continued conflict and maintain peace."
-                    }
-                ]
-            },
-            {
-                category: "couples-dynamics",
-                scenario: "Constant Criticism and Contempt",
-                reframes: [
-                    {
-                        from: "Contemptuous and harsh",
-                        to: "Desperately trying to be understood",
-                        explanation: "Harsh criticism often masks profound pain—the person is using intensity to make their partner finally hear them."
-                    },
-                    {
-                        from: "Tearing down their partner",
-                        to: "Expressing deep disappointment about unmet expectations",
-                        explanation: "Criticism is often criticism of broken promises or failed attempts to connect, not character assassination."
-                    },
-                    {
-                        from: "Nothing they do is right",
-                        to: "Vigilant for signs their needs matter",
-                        explanation: "Constant criticism can reflect heightened sensitivity and scanning—the person is checking if their partner cares about their experience."
-                    },
-                    {
-                        from: "Mean-spirited attacks",
-                        to: "Attempts to provoke a reaction and re-engagement",
-                        explanation: "Sometimes harsh words are an indirect plea for the partner to fight back, to show they care enough to engage."
-                    }
-                ]
-            },
-            {
-                category: "couples-dynamics",
-                scenario: "Power Struggles and Control",
-                reframes: [
-                    {
-                        from: "Dominating and controlling",
-                        to: "Trying to create order and predictability",
-                        explanation: "The need to control often emerges from anxiety and fear. The controlling partner is seeking safety through certainty."
-                    },
-                    {
-                        from: "Won't listen or compromise",
-                        to: "Afraid of losing what matters most",
-                        explanation: "Rigid positions often mask vulnerability—letting go feels like abandoning their core needs or identity."
-                    },
-                    {
-                        from: "Needs to win every argument",
-                        to: "Fighting to prove their perspective has value",
-                        explanation: "The need to 'win' may reflect a history of being dismissed or invalidated. Victory = finally being heard."
-                    },
-                    {
-                        from: "Manipulative",
-                        to: "Using the only tools they know to protect themselves",
-                        explanation: "Manipulation is often learned behavior from environments where direct communication wasn't safe or effective."
-                    }
-                ]
-            },
-            {
-                category: "couples-dynamics",
-                scenario: "Infidelity or Betrayal Aftermath",
-                reframes: [
-                    {
-                        from: "Betrayer who doesn't care",
-                        to: "Someone acting out unmet needs outside the relationship",
-                        explanation: "Infidelity is often a symptom of something broken in the partnership, not evidence of indifference."
-                    },
-                    {
-                        from: "Betrayed partner can't move on",
-                        to: "Hypervigilant after safety was violated",
-                        explanation: "Ongoing suspicion isn't controlling; it's a logical response to a broken covenant that now must be rebuilt."
-                    },
-                    {
-                        from: "Unforgivable and untrustworthy",
-                        to: "Someone trying to meet needs that weren't addressed in the marriage",
-                        explanation: "Infidelity, while hurtful, can point to gaps in connection or communication that the affair was attempting to fill."
-                    },
-                    {
-                        from: "The affair means the relationship is over",
-                        to: "A crisis that exposes and can potentially repair deeper ruptures",
-                        explanation: "Affairs often become turning points where couples finally address what's been unspoken."
+                        from: "A doomed match",
+                        to: "A couple who needs skills, not a conclusion",
+                        explanation: "The relationship is not automatically doomed; it is a system that currently lacks the patterns capable of managing distress without escalating."
                     }
                 ]
             },
 
-            // INEFFECTIVE/IMMATURE PARENTING
+            // BLAME FOCUS
             {
-                category: "ineffective-parenting",
-                scenario: "Parent as Peer/Friend",
+                category: "blame-focus",
+                scenario: "Partner Blaming as Conflict Escalates",
                 reframes: [
                     {
-                        from: "Lacking authority and boundaries",
-                        to: "Prioritizing connection and being liked",
-                        explanation: "The parent who acts like a friend is often seeking reassurance that their child loves them and values their relationship."
+                        from: "The other person is the problem",
+                        to: "The other person is one part of a disruptive interaction pattern",
+                        explanation: "Blame can be a way to stabilize a dysregulated system, even when it is inaccurate. The focus shifts from who is worse to how the cycle is being maintained."
                     },
                     {
-                        from: "Irresponsible and immature",
-                        to: "Trying to recapture lost youth or escape loneliness",
-                        explanation: "Parent-as-friend dynamics often reflect the adult's own unmet needs for companionship or their discomfort with the authority role."
+                        from: "They are just attacking",
+                        to: "They are reacting to threat, shame, or loss of control",
+                        explanation: "The accusation may be a protective response to fear, not necessarily a true reflection of the full reality."
                     },
                     {
-                        from: "Letting the child run the house",
-                        to: "Struggling to tolerate the child's disappointment",
-                        explanation: "The permissive parent often can't enforce boundaries because the child's anger or rejection feels unbearable."
-                    },
-                    {
-                        from: "Wanting to be cool and hip",
-                        to: "Desperate to stay relevant and connected",
-                        explanation: "The parent who tries too hard to be modern and trendy may be terrified of becoming irrelevant to their child."
+                        from: "This is all their fault",
+                        to: "This is the pattern needing attention",
+                        explanation: "When blame takes over, it can conceal the more important question: what interactions are keeping the conflict alive?"
                     }
                 ]
             },
+
+            // SERMONIZING
             {
-                category: "ineffective-parenting",
-                scenario: "Inconsistent or Reactive Parenting",
+                category: "sermonizing",
+                scenario: "Family Offering Advice Instead of Changing the Cycle",
                 reframes: [
                     {
-                        from: "All over the place",
-                        to: "Responding to circumstances rather than principles",
-                        explanation: "Inconsistency often reflects that the parent is stressed, tired, or has no internal structure of their own."
+                        from: "They are moralizing",
+                        to: "They are trying to manage their anxiety through certainty",
+                        explanation: "Advice can function as a way to contain fear when people feel helpless in the face of the problem."
                     },
                     {
-                        from: "Blown away by emotions",
-                        to: "Overwhelmed and dysregulated",
-                        explanation: "The parent who goes from zero to rage didn't plan to lose control; they were flooded and reactive."
+                        from: "They are lecturing",
+                        to: "They are attempting to regain control through expertise",
+                        explanation: "The sermonizing may be an effort to restore a sense of order in a family system that feels chaotic."
                     },
                     {
-                        from: "Unpredictable discipline",
-                        to: "Discipline determined by the parent's emotional state, not the child's behavior",
-                        explanation: "This pattern reveals the parent's dysregulation more than the child's misbehavior."
-                    },
-                    {
-                        from: "Can't follow through",
-                        to: "Unable to tolerate the conflict that follows a boundary",
-                        explanation: "The parent often gives in because the child's distress or pushback becomes intolerable."
+                        from: "They are being preachy",
+                        to: "They are trying to protect themselves from helplessness",
+                        explanation: "When people cannot influence the system directly, they may shift into advice-giving as a way to feel useful and in charge."
                     }
                 ]
             },
+
+            // DISENGAGEMENT (continued)
             {
-                category: "ineffective-parenting",
-                scenario: "Neglectful or Absent Parenting",
+                category: "disengagement",
+                scenario: "Partner Pulling Away During Conflict",
                 reframes: [
                     {
-                        from: "Doesn't care about their kids",
-                        to: "Overwhelmed and barely keeping head above water",
-                        explanation: "Neglect often results from the parent's own survival mode, not from lack of love."
+                        from: "They are abandoning the relationship",
+                        to: "They are reducing the intensity to stay regulated",
+                        explanation: "Withdrawal may be a self-protective strategy to prevent the system from intensifying and becoming overwhelming."
                     },
                     {
-                        from: "No rules or expectations",
-                        to: "Unable to organize or structure due to their own chaos",
-                        explanation: "The parent who can't set limits often has internal disorganization they're struggling with."
+                        from: "They don't care anymore",
+                        to: "They are conserving energy because the cycle is draining",
+                        explanation: "Distance can be a way of protecting the person from repeated emotional exhaustion and reactivity."
                     },
                     {
-                        from: "Checked out parent",
-                        to: "Parent in their own crisis",
-                        explanation: "Neglectful parents are often dealing with depression, addiction, trauma, or poverty that consumes their capacity."
-                    },
-                    {
-                        from: "Self-centered and irresponsible",
-                        to: "Stuck in their own developmental stage",
-                        explanation: "The parent who acts like a child themselves may have had development arrested by their own trauma or unmet needs."
-                    }
-                ]
-            },
-            {
-                category: "ineffective-parenting",
-                scenario: "Parentified Child / Role Reversal",
-                reframes: [
-                    {
-                        from: "Parent using child as support system",
-                        to: "Parent relying on their child because there's no other safe adult",
-                        explanation: "The parent isn't deliberately parentifying; they're isolated and their child is the only reliable person in their world."
-                    },
-                    {
-                        from: "Burdening child with adult problems",
-                        to: "Unable to contain adult struggles without support",
-                        explanation: "The parent likely grew up with unclear boundaries themselves and doesn't have a model for age-appropriate role separation."
-                    },
-                    {
-                        from: "Emotionally incestuous relationship",
-                        to: "Parent seeking the intimacy and understanding they can't get from peers",
-                        explanation: "This reflection of confusion about boundaries often stems from the parent's own past, not intentional boundary violation."
-                    },
-                    {
-                        from: "Making child responsible for parent's wellbeing",
-                        to: "Parent implicitly asking child to provide what they desperately need",
-                        explanation: "The parent-child role reversal is often the parent's unconscious cry for help and connection."
-                    }
-                ]
-            },
-            {
-                category: "ineffective-parenting",
-                scenario: "Parent Mimicking Child's Behavior or Competing",
-                reframes: [
-                    {
-                        from: "Immature and childish",
-                        to: "Afraid of losing their child to adolescence",
-                        explanation: "The parent who acts like a child may be trying to stay relevant and connected as their child grows away."
-                    },
-                    {
-                        from: "Threatened by child's independence",
-                        to: "Terrified of becoming unnecessary",
-                        explanation: "Competition with the child often masks deep anxiety about the parent's own identity and worth."
-                    },
-                    {
-                        from: "Can't accept child growing up",
-                        to: "Struggling to update their role as the child develops",
-                        explanation: "The parent may have defined themselves entirely through parenting small children and doesn't know who they are otherwise."
-                    },
-                    {
-                        from: "Jealous of child's relationships",
-                        to: "Desperate to maintain the primary bond as it naturally shifts",
-                        explanation: "Jealousy often reflects the parent's fear that they'll be abandoned or replaced as the child forms their own relationships."
+                        from: "They are shutting down",
+                        to: "They are setting a boundary against reactivity",
+                        explanation: "The shut-down posture may be an adaptive effort to stop the cycle rather than a sign that the relationship is over."
                     }
                 ]
             }
         ];
-
-        const categories = [
-            { id: "all", name: "All Categories" },
-            { id: "behavior-control", name: "Behavior Control" },
-            { id: "disengagement", name: "Disengagement" },
-            { id: "enmeshment", name: "Enmeshment" },
-            { id: "sermonizing", name: "Sermonizing" },
-            { id: "conflict-escalation", name: "Conflict Escalation" },
-            { id: "blame-focus", name: "Blame & Focus" },
-            { id: "couples-dynamics", name: "Couples Dynamics" },
-            { id: "ineffective-parenting", name: "Ineffective Parenting" }
-        ];
-
-        let currentCategory = "all";
-        let currentSearch = "";
-
-        function initializePage() {
-            renderCategoryFilters();
-            renderReframes();
-        }
-
-        function renderCategoryFilters() {
-            const filterContainer = document.getElementById("categoryFilters");
-            filterContainer.innerHTML = categories.map(cat => `
-                <button class="category-btn ${cat.id === 'all' ? 'active' : ''}" 
-                        onclick="filterByCategory('${cat.id}')">${cat.name}</button>
-            `).join("");
-        }
-
-        function filterByCategory(categoryId) {
-            currentCategory = categoryId;
-            currentSearch = "";
-            document.getElementById("searchInput").value = "";
-            document.querySelectorAll(".category-btn").forEach(btn => {
-                btn.classList.remove("active");
-            });
-            event.target.classList.add("active");
-            renderReframes();
-        }
-
-        function searchReframes() {
-            currentSearch = document.getElementById("searchInput").value.toLowerCase();
-            currentCategory = "all";
-            document.querySelectorAll(".category-btn").forEach(btn => {
-                btn.classList.remove("active");
-            });
-            document.querySelectorAll(".category-btn")[0].classList.add("active");
-            renderReframes();
-        }
 
         function renderReframes() {
-            const grid = document.getElementById("reframesGrid");
-            let filtered = reframes;
+            const categoryFilters = document.getElementById('categoryFilters');
+            const grid = document.getElementById('reframesGrid');
+            const uniqueCategories = [...new Set(reframes.map(item => item.category))];
 
-            if (currentCategory !== "all") {
-                filtered = filtered.filter(r => r.category === currentCategory);
-            }
+            categoryFilters.innerHTML = '';
+            const allBtn = document.createElement('button');
+            allBtn.className = 'category-btn active';
+            allBtn.textContent = 'All';
+            allBtn.onclick = () => {
+                document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+                allBtn.classList.add('active');
+                renderReframes();
+            };
+            categoryFilters.appendChild(allBtn);
 
-            if (currentSearch) {
-                filtered = filtered.filter(r => 
-                    r.scenario.toLowerCase().includes(currentSearch) ||
-                    r.reframes.some(rf => 
-                        rf.from.toLowerCase().includes(currentSearch) ||
-                        rf.to.toLowerCase().includes(currentSearch) ||
-                        rf.explanation.toLowerCase().includes(currentSearch)
-                    )
-                );
-            }
+            uniqueCategories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'category-btn';
+                btn.textContent = category.replace(/-/g, ' ');
+                btn.onclick = () => {
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    filterReframes(category);
+                };
+                categoryFilters.appendChild(btn);
+            });
 
-            if (filtered.length === 0) {
-                grid.innerHTML = `<div class="no-results"><h3>No reframes found</h3><p>Try a different search or category.</p></div>`;
+            renderCards(reframes);
+        }
+
+        function filterReframes(category) {
+            const filtered = reframes.filter(item => item.category === category);
+            renderCards(filtered);
+        }
+
+        function renderCards(items) {
+            const grid = document.getElementById('reframesGrid');
+            grid.innerHTML = '';
+
+            if (!items.length) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <h3>No reframes match your search.</h3>
+                        <p>Try a different keyword or category.</p>
+                    </div>
+                `;
                 return;
             }
 
-            grid.innerHTML = filtered.map(reframe => `
-                <div class="reframe-card ${reframe.category}">
-                    <span class="category-tag ${reframe.category}">${categories.find(c => c.id === reframe.category).name}</span>
-                    <h3>${reframe.scenario}</h3>
-                    ${reframe.reframes.map(rf => `
-                        <div class="reframe-pair">
-                            <div class="from">"${rf.from}"</div>
-                            <div class="to">"${rf.to}"</div>
-                            <div class="explanation">${rf.explanation}</div>
-                        </div>
-                    `).join("")}
-                </div>
-            `).join("");
+            items.forEach(item => {
+                const card = document.createElement('article');
+                card.className = `reframe-card ${item.category}`;
+
+                const tag = document.createElement('div');
+                tag.className = `category-tag ${item.category}`;
+                tag.textContent = item.category.replace(/-/g, ' ');
+
+                const title = document.createElement('h3');
+                title.textContent = item.scenario;
+
+                card.appendChild(tag);
+                card.appendChild(title);
+
+                item.reframes.forEach(pair => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'reframe-pair';
+
+                    const from = document.createElement('div');
+                    from.className = 'from';
+                    from.textContent = pair.from;
+
+                    const to = document.createElement('div');
+                    to.className = 'to';
+                    to.textContent = pair.to;
+
+                    const explanation = document.createElement('div');
+                    explanation.className = 'explanation';
+                    explanation.textContent = pair.explanation;
+
+                    wrapper.appendChild(from);
+                    wrapper.appendChild(to);
+                    wrapper.appendChild(explanation);
+                    card.appendChild(wrapper);
+                });
+
+                grid.appendChild(card);
+            });
         }
 
-        document.getElementById("searchInput").addEventListener("keypress", function(e) {
-            if (e.key === "Enter") searchReframes();
-        });
+        function searchReframes() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const activeCategoryBtn = document.querySelector('.category-btn.active');
+            const activeCategory = activeCategoryBtn && activeCategoryBtn.textContent.trim() !== 'All' ? activeCategoryBtn.textContent.trim().replace(/ /g, '-') : null;
 
-        initializePage();
+            let filtered = reframes;
+            if (activeCategory) {
+                filtered = filtered.filter(item => item.category === activeCategory);
+            }
+
+            if (query) {
+                filtered = filtered.filter(item => {
+                    const text = `${item.scenario} ${item.reframes.map(r => `${r.from} ${r.to} ${r.explanation}`).join(' ')}`.toLowerCase();
+                    return text.includes(query);
+                });
+            }
+
+            renderCards(filtered);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', searchReframes);
+        renderReframes();
     </script>
 </body>
 </html>
